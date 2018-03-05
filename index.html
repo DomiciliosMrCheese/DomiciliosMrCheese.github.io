@@ -20,8 +20,9 @@
 		</div>
 		<ol>
 		  <li id="addMensajero">Agregar mensajero</li>
-		  <li>Opción 2</li>
-		  <li>Opción 3</li>
+		  <li id="eliminarMesajero">Eliminar mesajero</li>
+		  <li id="actuMensajero">Actualizar mensajero</li>
+		  <li id="buscarMensajero">Buscar mensajero</li>
 		</ol>
 	</div>
 	<div class="border-body rigth-side">
@@ -91,7 +92,89 @@
             </div>
 		</form>
 	</div>
-			</div>
+	
+	<div id="popUpDelate">
+		
+		<div class="container">
+			<div class="form__top">
+				<h2>Formulario <span>Eliminar Mensajero</span></h2>
+			</div>		
+			<form class="form__reg" action="">
+				<div class="dropdown"> 
+				 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Mensajeros 
+				 <span class="caret"></span></button> 
+				 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1"> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li> 
+				 <li role="presentation" class="divider"></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li> 
+				</ul> 
+				</div> 
+				<div class="btn__form">
+					<input class="btn__submit" type="submit" value="Eliminar">
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<div id="popUpDate">
+		
+		<div class="container">
+			<div class="form__top">
+				<h2>Formulario <span>Actualizar Mensajero</span></h2>
+			</div>		
+			<form class="form__reg" action="">
+				<div class="dropdown"> 
+				 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Mensajeros 
+				 <span class="caret"></span></button> 
+				 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1"> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li> 
+				 <li role="presentation" class="divider"></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li> 
+				 </ul> 
+				</div> 
+				<input class="input" type="text" placeholder="&#128100;  Nombre" required autofocus>
+				<input class="input" type="text" placeholder="&#62139;  Cédula" required>
+				<input class="input" type="text" placeholder="&#xf21c;  Placa" required>
+				<input class="input" type="email" placeholder="&#9993;  Email" required>
+				<input class="input" type="text" placeholder="&#128222;  Telefono" required>
+				<input class="input" type="text" placeholder="&#8962;  Dirección" required>
+				<div class="btn__form">
+					<input class="btn__submit" type="submit" value="Actualizar">
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<div id="popUpSearch">
+		
+		<div class="container">
+			<div class="form__top">
+				<h2>Formulario <span>Buscar Mensajero</span></h2>
+			</div>		
+			<form class="form__reg" action="">
+				<div class="dropdown"> 
+				 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Filtro 
+				 <span class="caret"></span></button> 
+				 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1"> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Cédula</a></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nombre</a></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Placa</a></li> 
+				 <li role="presentation" class="divider"></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li> 
+				 </ul> 
+				</div> 
+				<input class="input" type="text" placeholder="&#128100;  Buscar" required autofocus>
+				
+				<div class="btn__form">
+					<input class="btn__submit" type="submit" value="Buscar">
+				</div>
+			</form>
+		</div>
+	</div>
 		<!-- <div class="dropdown"> -->
 			<!-- <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials -->
 			<!-- <span class="caret"></span></button> -->
