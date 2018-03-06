@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mr cheese</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bPopUp.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div class="border-body left-side">
+		<div class="logo-img">
+			<div class="title">Mr Cheese</div>
+			<img class="logo" src="http://www.pngmart.com/files/5/Hamburger-PNG-HD.png">
+		</div>
+		<ol>
+		  <li id="addMensajero">Agregar mensajero</li>
+		  <li id="eliminarMesajero">Eliminar mesajero</li>
+		  <li id="actuMensajero">Actualizar mensajero</li>
+		  <li id="buscarMensajero">Buscar mensajero</li>
+		</ol>
+	</div>
+	<div class="border-body rigth-side">
+		<div class="lane lbl" id="asdads" ondrop="Mensajeros.drop(event)" ondragover="Mensajeros.allowDrop(event)">En espera
+			<div draggable="true" ondragstart="Mensajeros.drag(event)" class="mensajero" id="mensajero1">
+				
+			</div>
+			<div draggable="true" ondragstart="Mensajeros.drag(event)" class="mensajero" id="mensajero2">
+				
+			</div>
+			<div draggable="true" ondragstart="Mensajeros.drag(event)" class="mensajero" id="mensajero3">
+				
+			</div>
+		</div>		
+		<div class="lane lbl" ondrop="Mensajeros.drop(event)" ondragover="Mensajeros.allowDrop(event)">Despachado</div>
+		<div class="lane lbl" ondrop="Mensajeros.drop(event)" ondragover="Mensajeros.allowDrop(event)">Entregado</div>
+	</div>
+
+	<div id="popUp">
+		<div class="title">Title</div>
+		<div class="content">
+			<div>
+				<div class="container">
+				<div class="form__top">
+				<h2>Formulario <span>Registro</span></h2>
+				</div>		
+					<form class="form__reg" action="">
+						<input class="input" type="text" placeholder="&#128100;  Nombre" required autofocus>
+						<input class="input" type="email" placeholder="&#9993;  Email" required>
+						<input class="input" type="text" placeholder="&#128222;  Telefono" required>
+						<input class="input" type="text" placeholder="&#8962;  Dirección" required>
+						<div class="btn__form">
+							<input class="btn__submit" type="submit" value="REGISTRAR">
+							<input class="btn__reset" type="reset" value="LIMPIAR">	
+						</div>
+					</form>
+				</div>
+				
+			</div>
+			<div>
+				<select>
+				  <option value="volvo">Mensajero 1</option>
+				  <option value="saab">Mensajero 2</option>
+				  <option value="mercedes">Mensajero 3</option>
+				  <option value="audi">Mensajero 4</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div id="popUpAdd">
+		
+				<div class="container">
+		<div class="form__top">
+			<h2>Formulario <span>Registro Mensajero</span></h2>
+		</div>		
+		<form class="form__reg" action="">
+			<input class="input" type="text" placeholder="&#128100;  Nombre" required autofocus>
+			<input class="input" type="text" placeholder="&#128387;  Cédula" required>
+			<input class="input" type="text" placeholder="&#128504;  Placa" required>
+            <input class="input" type="email" placeholder="&#9993;  Email" required>
+            <input class="input" type="text" placeholder="&#128222;  Telefono" required>
+            <input class="input" type="text" placeholder="&#8962;  Dirección" required>
+            <div class="btn__form">
+            	<input class="btn__submit" type="submit" value="REGISTRAR">
+            	<input class="btn__reset" type="reset" value="LIMPIAR">	
+            </div>
+		</form>
+	</div>
+	
+	<div id="popUpDelate">
+		
+		<div class="container">
+			<div class="form__top">
+				<h2>Formulario <span>Eliminar Mensajero</span></h2>
+			</div>		
+			<form class="form__reg" action="">
+				<div class="dropdown"> 
+				 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Mensajeros 
+				 <span class="caret"></span></button> 
+				 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1"> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li> 
+				 <li role="presentation" class="divider"></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li> 
+				</ul> 
+				</div> 
+				<div class="btn__form">
+					<input class="btn__submit" type="submit" value="Eliminar">
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<div id="popUpDate">
+		
+		<div class="container">
+			<div class="form__top">
+				<h2>Formulario <span>Actualizar Mensajero</span></h2>
+			</div>		
+			<form class="form__reg" action="">
+				<div class="dropdown"> 
+				 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Mensajeros 
+				 <span class="caret"></span></button> 
+				 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1"> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li> 
+				 <li role="presentation" class="divider"></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li> 
+				 </ul> 
+				</div> 
+				<input class="input" type="text" placeholder="&#128100;  Nombre" required autofocus>
+				<input class="input" type="text" placeholder="&#128387;  Cédula" required>
+				<input class="input" type="text" placeholder="&#128504;  Placa" required>
+				<input class="input" type="email" placeholder="&#9993;  Email" required>
+				<input class="input" type="text" placeholder="&#128222;  Telefono" required>
+				<input class="input" type="text" placeholder="&#8962;  Dirección" required>
+				<div class="btn__form">
+					<input class="btn__submit" type="submit" value="Actualizar">
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<div id="popUpSearch">
+		
+		<div class="container">
+			<div class="form__top">
+				<h2>Formulario <span>Buscar Mensajero</span></h2>
+			</div>		
+			<form class="form__reg" action="">
+				<div class="dropdown"> 
+				 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Filtro 
+				 <span class="caret"></span></button> 
+				 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1"> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Cédula</a></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nombre</a></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Placa</a></li> 
+				 <li role="presentation" class="divider"></li> 
+				 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li> 
+				 </ul> 
+				</div> 
+				<input class="input" type="text" placeholder="&#128100;  Buscar" required autofocus>
+				
+				<div class="btn__form">
+					<input class="btn__submit" type="submit" value="Buscar">
+				</div>
+			</form>
+		</div>
+	</div>
+		<!-- <div class="dropdown"> -->
+			<!-- <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials -->
+			<!-- <span class="caret"></span></button> -->
+			<!-- <ul class="dropdown-menu" role="menu" aria-labelledby="menu1"> -->
+			<!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li> -->
+			<!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li> -->
+			<!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li> -->
+			<!-- <li role="presentation" class="divider"></li> -->
+			<!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li> -->
+			<!-- </ul> -->
+		<!-- </div> -->
+	
+</body>
+</html>
