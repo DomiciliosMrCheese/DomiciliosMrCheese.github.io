@@ -200,3 +200,12 @@ h2 span {
 #popUpAdd, #popUpDelate, #popUpDate, #popUpSearch{
 	display: none;
 }
+.border-blue{
+	padding: 10px;
+	padding-left: 20px;
+
+}
+.border-blue *{
+	text-align: end;
+	border-left: 5px solid #bfe4ff;
+}
