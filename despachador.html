@@ -9,6 +9,9 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/bPopUp.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
@@ -16,29 +19,34 @@
 <body>
 	<div class="border-body left-side">
 		<div class="logo-img">
-			<div class="title">Mr Cheese</div>
-			<img class="logo" src="http://www.pngmart.com/files/5/Hamburger-PNG-HD.png">
+			<div class="title"></div>
 		</div>
-		<ol>
+		<ul>
 		  <li id="addMensajero">Agregar mensajero</li>
 		  <li>Opción 2</li>
 		  <li>Opción 3</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="border-body rigth-side">
-		<div class="lane lbl" id="asdads" ondrop="Mensajeros.drop(event)" ondragover="Mensajeros.allowDrop(event)">En espera
-			<div draggable="true" ondragstart="Mensajeros.drag(event)" class="mensajero" id="mensajero1">
-				
+		<div class="header">
+		<div class="title-blue">Manejo de despachadores</div> 
+		<div class="blue-content">Módulo de gestión y administración de pedidos y mensajeros.</div>
+		</div>
+		<div class="rigth-side-content">
+			<div class="lane lbl" id="asdads" ondrop="Mensajeros.drop(event)" ondragover="Mensajeros.allowDrop(event)">En espera
+				<div draggable="true" ondragstart="Mensajeros.drag(event)" class="mensajero" id="mensajero1">
+					
+				</div>
+				<div draggable="true" ondragstart="Mensajeros.drag(event)" class="mensajero" id="mensajero2">
+					
+				</div>
+				<div draggable="true" ondragstart="Mensajeros.drag(event)" class="mensajero" id="mensajero3">
+					
+				</div>
 			</div>
-			<div draggable="true" ondragstart="Mensajeros.drag(event)" class="mensajero" id="mensajero2">
-				
-			</div>
-			<div draggable="true" ondragstart="Mensajeros.drag(event)" class="mensajero" id="mensajero3">
-				
-			</div>
-		</div>		
-		<div class="lane lbl" ondrop="Mensajeros.drop(event)" ondragover="Mensajeros.allowDrop(event)">Despachado</div>
-		<div class="lane lbl" ondrop="Mensajeros.drop(event)" ondragover="Mensajeros.allowDrop(event)">Entregado</div>
+			<div class="lane lbl" ondrop="Mensajeros.drop(event)" ondragover="Mensajeros.allowDrop(event)">Despachado</div>
+			<div class="lane lbl" ondrop="Mensajeros.drop(event)" ondragover="Mensajeros.allowDrop(event)">Entregado</div>
+		</div>
 	</div>
 
 	<div id="popUp">

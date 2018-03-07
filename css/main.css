@@ -1,27 +1,45 @@
+html{
+	height: 100%;
+}
 body{
-	background: #cccccc;
-	height: 2000px;
+	background: #ffffff;
+	height: 100%;
 	display: flex;
 	margin: 0px;
 }
 .left-side{
+	font-family: 'Coiny', cursive;
 	width: 25%;
 	height: 100%;
-	background: #897BAF;
+	background: #ffffff;
 	border: 1px solid black;
 }
-.rigth-side{
-	width: 75%;
-	height: 100%;
-	background: #794A8D;
+.rigth-side-content{
+	width: 100%;
+	height: 80%;
+	background: #ffffff;
 	display: flex;
+}
+.rigth-side{
+	background: #0747a6;
+	width: 75%;
+}
+.rigth-side .header{
+	background: #0747a6;
+	height: 20%;
 }
 .border-body{
 	border: 1px solid black !important;
 }
 .title{
-	font-size: 20px;
+	height: 338px;
+	display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 600;
 	font-family: 'Lora', serif;
+	background: url(../img/log2.png) no-repeat;
+	background-size: 450px 300px;
 }
 .logo{
 	height: 200px;
@@ -30,7 +48,12 @@ body{
 	justify-content: center;
 }
 .left-side li{
-	height: 25px;
+    font-size: 30px;
+    height: 25px;
+    padding-bottom: 36px;
+}
+.left-side ul{
+	list-style-type: none;
 }
 .mensajero{
 	height: 50px;
@@ -63,12 +86,31 @@ body{
 	padding: 5px;
 }
 li:hover{
-	font-size: 20px;
-	color: #;
+	font-size: 40px;
+	padding-bottom: 50px;
+	color: #008564;
 }
 .lbl{
 	-webkit-user-select: none; /* Safari */        
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* IE10+/Edge */
 	user-select: none; /* Standard */
+}
+.header{
+	height: 20%;
+	background: #ffffff;
+}
+.header .title-blue{
+	font-size: 45px;
+	background: none;
+	color: #ffffff;
+	font-weight: 600;
+	font-family: 'Open Sans Condensed', sans-serif;
+	display: flex;
+    justify-content: center;
+}
+.blue-content{
+	color: #ffffff;
+	margin: 20px;
+	font-size: 20px;
 }
