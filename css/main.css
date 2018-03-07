@@ -56,20 +56,23 @@ body{
 	list-style-type: none;
 }
 .mensajero{
-	height: 50px;
-    width: 92%;
+	height: 100px;
+    width: 95%;
     min-width: 60%;
-    background: black;
-    border: 1px solid #fff;
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
     margin: 10px;
 }
+.mensajero:hover{
+	background: rgb(235, 236, 240);
+	cursor: move;
+}
 .lane{
+	background-color: #F4F5F7;
 	border: solid 1px black;
 	width: 34%;
 	height: 100%;
-}
-.lane:hover{
-	border: dashed 1px blue;
 }
 #popUp{
 	display: none; 
@@ -81,15 +84,15 @@ body{
 #popUpAdd{
 	display: none; 
 	background: #ffffff;
-	height: 300px;
-	width: 200px;
+	height: 580px;
+	width: 500px;
 	padding: 5px;
-}
+}/*
 li:hover{
 	font-size: 40px;
 	padding-bottom: 50px;
 	color: #008564;
-}
+}*/
 .lbl{
 	-webkit-user-select: none; /* Safari */        
 	-moz-user-select: none; /* Firefox */
@@ -113,4 +116,87 @@ li:hover{
 	color: #ffffff;
 	margin: 20px;
 	font-size: 20px;
+}
+.container {
+	max-width: 450px;
+	height: auto;
+	background-color: #EFEFEF;
+	margin: 5% auto;
+	padding-bottom: 1rem;
+	
+}
+
+.form__top {
+	width: 100%;
+	text-align: center;
+	padding: 2rem 0 1rem;
+	border-top: solid .4rem #F39B53;
+	margin-bottom: 1rem;
+}
+
+.form__top h2 {
+	font-weight: bold;
+	color: #CAC8C8;
+	font-size: 18px;
+}
+
+h2 span {
+	color: #F39B53;
+}
+
+.form__reg {
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.btn__form {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1rem;
+}
+
+.input, .btn__submit, .btn__reset{
+	background-color: #EFEFEF;
+	padding: .5rem;
+	margin: .5rem 0;
+	border: none;
+	border-bottom: solid #C8C8C8 .2rem;
+	transition: all .5s;
+}
+
+.input:focus {
+	border-bottom: solid #F39B53 .2rem;
+}
+
+.btn__submit, .btn__reset {
+	width: 40%;
+	border-bottom: none;
+	background-color: #31B1E5;
+	color: white;
+}
+
+.btn__reset {
+	background-color: #EDA135;
+}
+
+.btn__submit:hover {
+	background-color: #4C9ED9;
+}
+
+.btn__reset:hover{
+	background-color: #FA9535;
+}
+.tag{
+	border-bottom: 1px solid #000000;
+	display: flex;
+	color: #5e6c84;
+	justify-content: center;
+	height: 5%;
+	padding-top: 7px;
+	font-family: 'Coiny', cursive;
+}
+#popUpAdd, #popUpDelate, #popUpDate, #popUpSearch{
+	display: none;
 }
