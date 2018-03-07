@@ -214,3 +214,6 @@ h2 span {
 	flex-direction: column;
 	padding: 20px;
 }
+.modal-login a{
+	color: #ffffff !important;
+}
