@@ -5,8 +5,12 @@ $( document ).ready(function() {
 	Mensajeros.initializer = function(){
 		$('.mensajero').click(Mensajeros.popUp);
 		$('#addMensajero').click(Mensajeros.popUpAdd);
-
+		$('#eliminarMesajero').click(Mensajeros.popUpDelate);
+		$('#actuMensajero').click(Mensajeros.popUpDate);
+		$('#buscarMensajero').click(Mensajeros.popUpSearch);
+		$('#primero').click(Mensajeros.popUpAdd);
 	}
+
 	Mensajeros.allowDrop = function(ev) {
     	ev.preventDefault();
 	}
@@ -34,6 +38,29 @@ $( document ).ready(function() {
 
 	Mensajeros.popUpAdd = function(){
 		$('#popUpAdd').bPopup({
+            speed: 650,
+            transition: 'slideIn',
+	    	transitionClose: 'slideBack'
+        });
+	}
+	
+	Mensajeros.popUpDelate = function(){
+		$('#popUpDelate').bPopup({
+            speed: 650,
+            transition: 'slideIn',
+	    	transitionClose: 'slideBack'
+        });
+	}
+	
+	Mensajeros.popUpDate = function(){
+		$('#popUpDate').bPopup({
+            speed: 650,
+            transition: 'slideIn',
+	    	transitionClose: 'slideBack'
+        });
+	}
+	Mensajeros.popUpSearch = function(){
+		$('#popUpSearch').bPopup({
             speed: 650,
             transition: 'slideIn',
 	    	transitionClose: 'slideBack'
