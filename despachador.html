@@ -12,6 +12,7 @@
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/bPopUp.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 	<div class="border-body left-side">
@@ -20,11 +21,21 @@
 			<img class="logo" src="http://www.pngmart.com/files/5/Hamburger-PNG-HD.png">
 		</div>
 		<ol>
-		  <li id="addMensajero">Agregar mensajero</li>
-		  <li>Opción 2</li>
-		  <li>Opción 3</li>
+			<form class="form__reg" action="">
+				<div class="dropdown"> 
+					<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Mensajeros 
+					<span class="caret"></span></button> 
+					<ul class="dropdown-menu" role="menu" aria-labelledby="menu1"> 
+						 <li id="addMensajero">Agregar mensajero</li>
+						 <li id="eliminarMesajero">Eliminar mesajero</li>
+						 <li id="actuMensajero">Actualizar mensajero</li>
+						 <li id="buscarMensajero">Buscar mensajero</li>
+					</ul> 
+				</div> 
+			</form>
 		</ol>
 	</div>
+	
 	<div class="border-body rigth-side">
 		<div class="lane lbl" id="asdads" ondrop="Mensajeros.drop(event)" ondragover="Mensajeros.allowDrop(event)">En espera
 			<div draggable="true" ondragstart="Mensajeros.drag(event)" class="mensajero" id="mensajero1">
@@ -42,11 +53,7 @@
 	</div>
 
 	<div id="popUp">
-		<div class="title">Title</div>
-		<div class="content">
-			<div>
-				Acá va ir los datos del pedido.
-			</div>
+		
 			<div>
 				<select>
 				  <option value="volvo">Mensajero 1</option>
@@ -55,27 +62,111 @@
 				  <option value="audi">Mensajero 4</option>
 				</select>
 			</div>
-		</div>
-	</div>
+		
+	
+	
 
 	<div id="popUpAdd">
-		<div class="title">Agregar mensajero</div>
-		<div class="content">
-			<div>
-				Acá va ir los datos del pedido.
-			</div>
-		<div class="dropdown">
-			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Tutorials
-			<span class="caret"></span></button>
-			<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
-			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
-			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
-			<li role="presentation" class="divider"></li>
-			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
-			</ul>
-		</div>
+	
+		
+		<div class="container">
+			<div class="form__top">
+				<h2>Formulario <span>Registro Mensajero</span></h2>
+			</div>		
+				<form class="form__reg" action="">
+					<input class="input" type="text" placeholder="&#128100;  Nombre" required autofocus>
+					<input class="input" type="text" placeholder="&#128387;  Cédula" required>
+					<input class="input" type="text" placeholder="&#128504;  Placa" required>
+					<input class="input" type="email" placeholder="&#9993;  Email" required>
+					<input class="input" type="text" placeholder="&#128222;  Telefono" required>
+					<input class="input" type="text" placeholder="&#8962;  Dirección" required>
+					<div class="btn__form">
+						<input class="btn__submit" type="submit" value="REGISTRAR">
+						<input class="btn__reset" type="reset" value="LIMPIAR">	
+					</div>
+				</form>
 		</div>
 	</div>
+	<div id="popUpDelate">
+		
+			<div class="container">
+			<div class="form__top">
+				<h2>Formulario <span>Eliminar Mensajero</span></h2>
+			</div>		
+			<form class="form__reg" action="">
+				<div class="dropdown"> 
+				 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Mensajeros 
+				 <span class="caret"></span></button> 
+					 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1"> 
+						 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Juan</a></li> 
+						 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pedro</a></li> 
+						 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Luis</a></li>
+					</ul> 
+				</div> 
+				<div class="btn__form">
+					<input class="btn__submit" type="submit" value="Eliminar">
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<div id="popUpDate">
+		
+		<div class="container">
+			<div class="form__top">
+				<h2>Formulario <span>Actualizar Mensajero</span></h2>
+			</div>		
+			<form class="form__reg" action="">
+				<div class="dropdown"> 
+				 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Mensajeros 
+				 <span class="caret"></span></button> 
+				 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1"> 
+					 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li> 
+					 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li> 
+					 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li> 
+					 <li role="presentation" class="divider"></li> 
+					 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li> 
+				 </ul> 
+				</div> 
+				<input class="input" type="text" placeholder="&#128100;  Nombre" required autofocus>
+				<input class="input" type="text" placeholder="&#128387;  Cédula" required>
+				<input class="input" type="text" placeholder="&#128504;  Placa" required>
+				<input class="input" type="email" placeholder="&#9993;  Email" required>
+				<input class="input" type="text" placeholder="&#128222;  Telefono" required>
+				<input class="input" type="text" placeholder="&#8962;  Dirección" required>
+				<div class="btn__form">
+					<input class="btn__submit" type="submit" value="Actualizar">
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<div id="popUpSearch">
+		
+		<div class="container">
+			<div class="form__top">
+				<h2>Formulario <span>Buscar Mensajero</span></h2>
+			</div>		
+			<form class="form__reg" action="">
+				<div class="dropdown"> 
+				 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Filtro 
+				 <span class="caret"></span></button> 
+				 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1"> 
+					 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Cédula</a></li> 
+					 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nombre</a></li> 
+					 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Placa</a></li> 
+					 <li role="presentation" class="divider"></li> 
+					 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li> 
+				 </ul> 
+				</div> 
+				<input class="input" type="text" placeholder="&#128100;  Buscar" required autofocus>
+				
+				<div class="btn__form">
+					<input class="btn__submit" type="submit" value="Buscar">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>		
 </body>
 </html>
