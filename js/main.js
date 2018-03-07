@@ -1,6 +1,7 @@
 let Mensajeros = {};
 
 $( document ).ready(function() {
+
 	Mensajeros.initializer = function(){
 		$('.mensajero').click(Mensajeros.popUp);
 		$('#addMensajero').click(Mensajeros.popUpAdd);
@@ -15,7 +16,10 @@ $( document ).ready(function() {
 	}
 
 	Mensajeros.drag = function(ev) {
+		var img = document.createElement("img");
 	    ev.dataTransfer.setData("text", ev.target.id);
+	    img.src = "http://www.motoexpress.com.uy/images/Icono.Express5.jpg";
+	    ev.dataTransfer.setDragImage(img, 0, 0);
 	}
 
 	Mensajeros.drop = function (ev) {
