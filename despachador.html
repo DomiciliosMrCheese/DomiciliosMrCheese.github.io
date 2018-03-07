@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Mr Cheese</title>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
 	<link rel="shortcut icon" href="img/comida.png"/>
 	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -15,6 +15,7 @@
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/bPopUp.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
@@ -36,13 +37,17 @@
 				</div> 
 			</form>
 		</ol>
-
+		<div class ="buttons">
+			<button type="submit" class="btn btn-primary mb-2">Pedidos</button>
+			<button type="submit" class="btn btn-primary mb-2">Chat</button>
+			<button type="submit" class="btn btn-primary mb-2">Ayuda</button>
+		</div>
 	</div>
 	
 	<div class="border-body rigth-side">
 		<div class="header">
-		<div class="title-blue">Manejo de despachadores</div> 
-		<div class="blue-content">Módulo de gestión y administración de pedidos y mensajeros.</div>
+			<div class="title-blue">Gestión de pedidos</div> 
+			<div class="blue-content">Módulo de gestión y administración de pedidos y mensajeros.</div>
 		</div>
 		<div class="rigth-side-content">
 			<div class="lane lbl" id="firstLane" ondrop="Mensajeros.drop(event)" ondragover="Mensajeros.allowDrop(event)">
@@ -132,7 +137,6 @@
 	</div>
 	
 	<div id="popUpDate">
-		
 		<div class="container">
 			<div class="form__top">
 				<h2>Formulario <span>Actualizar Mensajero</span></h2>
@@ -188,6 +192,5 @@
 			</form>
 		</div>
 	</div>
-
 </body>
 </html>

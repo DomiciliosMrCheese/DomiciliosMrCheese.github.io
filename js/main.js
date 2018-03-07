@@ -29,7 +29,7 @@ $( document ).ready(function() {
 	}
 
 	Mensajeros.popUp = function(){
-		$('#popUp').bPopup({
+		$('#popUpSearch').bPopup({
             speed: 650,
             transition: 'slideIn',
 	    	transitionClose: 'slideBack'
