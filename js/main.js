@@ -7,7 +7,7 @@ $( document ).ready(function() {
 		$('#eliminarMesajero').click(Mensajeros.popUpDelate);
 		$('#actuMensajero').click(Mensajeros.popUpDate);
 		$('#buscarMensajero').click(Mensajeros.popUpSearch);
-		$('#primero').click(Mensajeros.popUpAdd);
+		
 	}
 
 	Mensajeros.allowDrop = function(ev) {
