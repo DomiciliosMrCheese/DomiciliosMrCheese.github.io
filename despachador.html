@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>Mr Cheese</title>
-	
 	<link rel="shortcut icon" href="img/comida.png"/>
 	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -19,25 +18,31 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyC2u0d1Ph7mUk4YvX98XgMqn-0SUGUwZqY",
+	    authDomain: "despachadordb.firebaseapp.com",
+	    databaseURL: "https://despachadordb.firebaseio.com",
+	    projectId: "despachadordb",
+	    storageBucket: "",
+	    messagingSenderId: "341989072839"
+	  };
+	  firebase.initializeApp(config);
+	</script>
 	<div class="border-body left-side">
 		<div class="logo-img">
 			<div class="title"></div>
 		</div>
-		<ol>
-			<form class="form__reg" action="">
-				<div class="dropdown"> 
-					<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Mensajeros 
-					<span class="caret"></span></button> 
-					<ul class="dropdown-menu" role="menu" aria-labelledby="menu1"> 
-						 <li id="addMensajero">Agregar mensajero</li>
-						 <li id="eliminarMesajero">Eliminar mesajero</li>
-						 <li id="actuMensajero">Actualizar mensajero</li>
-						 <li id="buscarMensajero">Buscar mensajero</li>
-					</ul> 
-				</div> 
-			</form>
-		</ol>
 		<div class ="buttons">
+		<button class="btn btn-primary mb-2" id="menu1" data-toggle="dropdown">Mensajeros </button> 
+				<ul class="dropdown-menu" type="submit" role="menu" aria-labelledby="menu1"> 
+					 <li id="addMensajero">Agregar </li>
+					 <li id="actuMensajero">Actualizar </li>
+					 <li id="buscarMensajero">Buscar </li>
+					 <li id="eliminarMesajero">Eliminar </li>
+				</ul>
 			<button type="submit" class="btn btn-primary mb-2">Pedidos</button>
 			<button type="submit" class="btn btn-primary mb-2">Chat</button>
 			<button type="submit" class="btn btn-primary mb-2">Ayuda</button>
@@ -80,6 +85,9 @@
 			<div class="lane lbl" ondrop="Mensajeros.drop(event)" ondragover="Mensajeros.allowDrop(event)">
 				<div class="tag">Entregado</div>
 			</div>
+			<div class="lane lbl" ondrop="Mensajeros.drop(event)" ondragover="Mensajeros.allowDrop(event)">
+				<div class="tag">Cancelado</div>
+			</div>
 		</div>
 	</div>
 
@@ -93,10 +101,11 @@
 			</select>
 		</div>
 	</div>
+	<!-- Formulario de registro de mensajeros -->
 	<div id="popUpAdd">
 		<div class="container">
 			<div class="form__top">
-				<h2>Formulario <span>Registro Mensajero</span></h2>
+				<h4>Registrar mensajero</h4>
 			</div>		
 			<form class="form__reg" action="">
 				<input class="input" type="text" placeholder="&#128100;  Nombre" required autofocus>
@@ -112,12 +121,11 @@
 			</form>
 		</div>
 	</div>
-
+	<!--Eliminar mensajeros -->
 	<div id="popUpDelate">
-		
 			<div class="container">
 			<div class="form__top">
-				<h2>Formulario <span>Eliminar Mensajero</span></h2>
+				<h4>Eliminar mensajero</h4>
 			</div>		
 			<form class="form__reg" action="">
 				<div class="dropdown"> 
@@ -135,11 +143,11 @@
 			</form>
 		</div>
 	</div>
-	
+	<!-- Actualizar mensajero -->
 	<div id="popUpDate">
 		<div class="container">
 			<div class="form__top">
-				<h2>Formulario <span>Actualizar Mensajero</span></h2>
+			<h4>Actualizar mensajero</h4>
 			</div>		
 			<form class="form__reg" action="">
 				<div class="dropdown"> 
@@ -165,12 +173,11 @@
 			</form>
 		</div>
 	</div>
-	
+	<!-- Buscar mensajeros -->
 	<div id="popUpSearch">
-		
 		<div class="container">
 			<div class="form__top">
-				<h2>Formulario <span>Buscar Mensajero</span></h2>
+			<h4>Buscar mensajero</h4>
 			</div>		
 			<form class="form__reg" action="">
 				<div class="dropdown"> 
@@ -179,13 +186,10 @@
 				 <ul class="dropdown-menu" role="menu" aria-labelledby="menu1"> 
 					 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Cédula</a></li> 
 					 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nombre</a></li> 
-					 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Placa</a></li> 
-					 <li role="presentation" class="divider"></li> 
-					 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li> 
+					 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Placa</a></li>  
 				 </ul> 
 				</div> 
 				<input class="input" type="text" placeholder="&#128100;  Buscar" required autofocus>
-				
 				<div class="btn__form">
 					<input class="btn__submit" type="submit" value="Buscar">
 				</div>
